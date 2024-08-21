@@ -10,7 +10,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-const PORT = process.env.PORT || 4000; // Use the port from .env, or default to 4000
+const PORT = process.env.PORT  // Use the port from .env, or default to 4000
 
 // Middleware to parse JSON requests
 app.use(express.json({ limit: '100mb' }));

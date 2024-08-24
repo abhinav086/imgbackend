@@ -7,7 +7,7 @@ import cors from "cors";
 
 const app = express();
 const corsOptions = {
-    origin: ['http://localhost:3000','https://my-image-app-ruby.vercel.app'],
+    origin: ['http://localhost:3000','https://pioneerestate.vercel.app'],
     credentials: true
 };
 app.use(cors(corsOptions));

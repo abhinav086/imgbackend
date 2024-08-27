@@ -2,7 +2,7 @@ import Property from '../models/propertyModel.js';
 
 // Create a new property
 export const createProperty = async (req, res) => {
-    const { name, areaInSqFt, location, price ,images } = req.body;
+    const { name, areaInSqFt, location, price ,images, type ,description} = req.body;
 
     try {
         const newProperty = new Property({
@@ -10,7 +10,9 @@ export const createProperty = async (req, res) => {
             areaInSqFt,
             location,
             price,
-            images
+            images,
+            type,
+            description
         });
 
         await newProperty.save();

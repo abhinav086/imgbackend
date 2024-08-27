@@ -26,10 +26,17 @@ const PropertySchema = new mongoose.Schema({
         type: String,
         
     },
+    type: { 
+        type: String,
+    } ,
     price: {
         type: Number,
     },
-    images: [ImageSchema] // Add an array of ImageSchema to store multiple images
+    description: { 
+        type: String,
+    } ,
+    images: [ImageSchema]
+ // Add an array of ImageSchema to store multiple images
 }, {
     timestamps: true
 });

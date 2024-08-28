@@ -16,7 +16,6 @@ const ImageSchema = new mongoose.Schema({
 const PropertySchema = new mongoose.Schema({
     name: {
         type: String,
-        
     },
     areaInSqFt: {
         type: Number,

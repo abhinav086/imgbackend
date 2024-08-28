@@ -2,7 +2,7 @@ import Property from '../models/propertyModel.js';
 
 // Create a new property
 export const createProperty = async (req, res) => {
-    const { name, areaInSqFt, location, price ,images, type ,description} = req.body;
+    const { name, areaInSqFt, location, price ,images, type , description} = req.body;
 
     try {
         const newProperty = new Property({
@@ -39,10 +39,14 @@ export const deleteProperty = async (req, res) => {
 
         if (!deletedProperty) {
             return res.status(404).json({ error: 'Property not found' });
+
         }
+
 
         res.status(200).json({ message: 'Property deleted successfully', property: deletedProperty });
     } catch (error) {
+    
         res.status(500).json({ error: 'Error deleting property', details: error.message });
+
     }
 };

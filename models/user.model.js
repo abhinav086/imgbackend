@@ -1,21 +1,21 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-    username:{
-        type:String,
-    },
-    sex:{
-        type:String,
-    },
-    age:{
-        type:Number,
-    },
-    mobile:{
-        type:Number,
-    },
-    premium:{
-        type:Boolean,
-    },
-    photos:[],
+    username: {
+        type: String,
+        required: true,
+        trim: true,  // Automatically trims whitespace
+      },
+      email: {
+        type: String,
+        required: true,
+        unique: true,
+        lowercase: true,  // Converts email to lowercase
+        trim: true,
+      },
+      password: {
+        type: String,
+        required: true,
+      },
 });
-export const User = mongoose.model("user",userSchema);
+export const User = mongoose.model("User",userSchema);

@@ -1,7 +1,7 @@
 import { Image } from "../models/ImageModel.js";
 
 // Function to upload an image
-export const uploadImage = async (req, res) => {
+export const uploadImage = async (req, res) => {e
     try {
         const { base64,name} = req.body;
 console.log("callllleddd");
